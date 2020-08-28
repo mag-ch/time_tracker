@@ -1,0 +1,20 @@
+{% extends "start_page.html" %}
+
+{% macro task(name, value='', type='text', size=20) -%}
+    <button type="button" name="task" value="type here">
+{%- endmacro %}
+
+{% block content %}
+<h2 style="margin-bottom:1px">{{ day_of_the_week }} </h2>
+<h3 style="margin-top:1px">{{ day }}</h3>
+<div class="row" style="display:flex;align:center">
+  <div class="column" id="tasks" style="width:50%">
+    <p>Create Tasks</p>
+    <p>{{ task('username')}} </p>
+  </div>
+  <div class="column" id="schedule" style="width:50%">
+    <p>Schedule</p>
+    <p> {{ tasks }} </p>
+  </div>
+</div>
+{% endblock %}
